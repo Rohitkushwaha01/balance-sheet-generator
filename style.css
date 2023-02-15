@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+}
+
+/* flex styles */
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.c-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+/* whole documents input */
+input {
+  padding: 5px;
+}
+
+/* navbar styles */
+
+.logo {
+  margin-top: 20px;
+  border-bottom: 1.5px solid #ccc;
+}
+
+.logo img {
+  width: 80px;
+  margin-left: 45px;
+  margin-bottom: 10px;
+}
+
+.logo .login {
+  margin-right: 45px;
+}
+
+.login i {
+  margin-left: 5px;
+}
+
+/* main-section  */
+.main-section h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #5a5959;
+}
+
+.main-section span {
+  color: red;
+}
+
+/* user form */
+
+.user-form {
+  width: 40%;
+  padding: 20px;
+  font-size: 0.7rem;
+  margin: auto;
+}
+
+.email p {
+  font-size: 0.6rem;
+}
+
+.bname p,
+.stock p,
+.sheet-date p,
+.asset p {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+.stock .flex {
+  margin: 5px 0px;
+  justify-content: flex-start;
+}
+
+.sheet-date label,
+.cash label,
+.accounts label,
+.inventory label,
+.expenses label,
+.notes label {
+  margin-top: 8px;
+  margin-bottom: 9px;
+}
+
+#email,
+#bname {
+  margin-top: 5px;
+  border: 1px solid #898888;
+}
+
+#email:focus,
+#bname:focus {
+  outline: 1px solid #5a5959;
+}
+
+/* preview-form */
+
+.preview-form {
+  border: 1px solid #898888;
+  width: 445px;
+  height: 480px;
+  margin: 40px auto;
+  overflow-y: scroll;
+}
+
+.preview-form::-webkit-scrollbar {
+  width: 2px;
+  background-color: #898888;
+}
+
+.preview-form::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 10px;
+}
+
+.preview-form .page-1 {
+  margin: 10px auto;
+  width: 430px;
+  height: 450px;
+  box-shadow: 0px 0px 6px 1px #000;
+}
+
+.preview-form .page-1 .page-1-head {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#sheet-date-page-1 {
+  border: none;
+}
+
+#sheet-date-page-1::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.current-assests {
+  padding: 2rem;
+}
+
+.current-assests h2 {
+  font-size: 0.7rem;
+  border-bottom: 2px solid;
+  width: 81px;
+}
+
+.current-assests h4,
+.current-assests p {
+  font-size: 0.6rem;
+  margin: 0px;
+}
+
+.current-assests > div {
+  height: 15px;
+  align-items: center;
+  border: 1px solid;
+  padding: 0px 10px;
+}
+
+/* Print button */
+.print {
+  margin: 10px;
+  width: 10%;
+  text-align: center;
+}
+
+/* footer */
+.footer {
+  padding: 20px;
+  background-color: rgb(42, 20, 20);
+  color: white;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+/* responsiveness */
+@media screen and (max-width: 760px) {
+  .user-form {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+/* When print apply this styles */
+@media print {
+  .nav-section,
+  .user-form,
+  .footer,
+  .print,
+  .main-section h1 {
+    display: none;
+  }
+  .preview-form {
+    border: none;
+  }
+  .preview-form {
+    width: 100%;
+  }
+  .preview-form .page-1 {
+    box-shadow: none;
+  }
+  .current-assests {
+    padding: 0px;
+  }
+}
