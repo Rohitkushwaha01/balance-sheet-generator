@@ -171,17 +171,20 @@ input {
 
 /* Print button */
 .print {
-  margin: 0px 0px 20px 100px;
+  text-align: center;
+  margin: 20px;
 }
 
 .print button {
+  font-size: 1rem;
   width: 87px;
-  padding: 6px 0px;
+  padding: 11px 0px;
   background-color: rgb(42, 20, 20);
-  border: 1px solid #ccc;
   box-shadow: 0px 0px 3px 0px #000;
   color: white;
   font-weight: bold;
+  border-radius: 6px;
+  border: none;
 }
 
 /* footer */
