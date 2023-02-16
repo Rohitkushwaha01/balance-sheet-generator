@@ -110,7 +110,7 @@ input {
 .preview-form {
   border: 1px solid #898888;
   width: 445px;
-  height: 480px;
+  height: 540px;
   margin: 40px auto;
   overflow-y: scroll;
 }
@@ -128,45 +128,90 @@ input {
 .preview-form .page-1 {
   margin: 10px auto;
   width: 430px;
-  height: 450px;
+  height: 520px;
   box-shadow: 0px 0px 6px 1px #000;
+  position: relative;
 }
 
-.preview-form .page-1 .page-1-head {
+.preview-form .page-1 img {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.preview-form .page-1 .user-inputs label {
+  position: absolute;
+  right: 22px;
+  background-color: #ffffff;
+  width: 100px;
+  text-align: end;
+  height: 14px;
+  font-size: small;
+}
+
+#business-data {
+  right: 0px;
+  margin-top: 20px;
+  width: 100%;
+  background-color: white;
   text-align: center;
-  padding-top: 20px;
+  font-size: larger;
+  font-weight: bold;
 }
 
-#sheet-date-page-1 {
-  border: none;
+#business-data::after {
+  content: "";
+  width: 152px;
+  height: 2px;
+  background-color: black;
+  position: relative;
+  display: block;
+  left: 136px;
+  top: 1px;
 }
 
-#sheet-date-page-1::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
+#cash-data {
+  top: 147px;
 }
 
-.current-assests {
-  padding: 2rem;
+#acc-data {
+  top: 165px;
 }
 
-.current-assests h2 {
-  font-size: 0.7rem;
-  border-bottom: 2px solid;
-  width: 81px;
+#Inven-data {
+  top: 183px;
 }
 
-.current-assests h4,
-.current-assests p {
-  font-size: 0.6rem;
-  margin: 0px;
+#prepaid-data {
+  top: 201px;
 }
 
-.current-assests > div {
-  height: 15px;
-  align-items: center;
-  border: 1px solid;
-  padding: 0px 10px;
+#notes-data {
+  top: 218px;
+}
+
+#other-data {
+  top: 236px;
+}
+
+#total-data {
+  top: 260px;
+}
+
+#mm-data {
+  top: 72px;
+  right: 234px;
+}
+
+#dd-data {
+  top: 72px;
+  right: 213px;
+  width: 20px;
+}
+
+#yyyy-data {
+  top: 72px;
+  right: 182px;
+  width: 25px;
 }
 
 /* Print button */

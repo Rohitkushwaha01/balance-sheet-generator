@@ -33,14 +33,14 @@
         <div class="user-form">
           <div class="c-flex email">
             <label for="email">Email<span>*</span></label>
-            <input type="email" id="email" />
+            <input type="email" id="email" required/>
             <p>Already have an Account?<a href="#">Login</a></p>
           </div>
 
           <div class="c-flex bname">
             <p>What's the name of your Business?</p>
             <label for="bname">Business name<span>*</span></label>
-            <input type="number" id="bname" />
+            <input type="text" id="bname" required/>
           </div>
 
           <div class="c-flex stock">
@@ -93,42 +93,20 @@
         </div>
         <div class="preview-form">
          <div class="page-1">
-            <div class="page-1-head">
-              <h3>Balance sheet</h3>
-              <input type="date" id="sheet-date-page-1" asp-format="{0:yyyy-MM-dd}">
+           <div class="user-inputs">
+              <img src="page1.png" alt="">
+              <label id="business-data"></label>
+              <label id="mm-data">mm</label>
+              <label id="dd-data">dd</label>
+              <label id="yyyy-data">yyyy</label>
+              <label id="cash-data">$0.00</label>
+              <label id="acc-data">$0.00</label>
+              <label id="Inven-data">$0.00</label>
+              <label id="prepaid-data">$0.00</label>
+              <label id="notes-data">$0.00</label>
+              <label id="other-data">$0.00</label>
+              <label id="total-data">$0.00</label>
             </div>
-            <div class="current-assests">
-              <h2>Current Assests</h2>
-              <div class="cash-pdf flex">
-                <h4>Cash: </h4>
-                <p id="cash-data">$0.00</p>
-              </div>
-              <div class="acc-pdf flex">
-                <h4>Accounts Receivable: </h4>
-                <p id="acc-data">$0.00</p>
-              </div>
-              <div class="Inven-pdf flex">
-                <h4>Inventory: </h4>
-                <p id="Inven-data">$0.00</p>
-              </div>
-              <div class="prepaid-pdf flex">
-                <h4>Prepaid Expenses: </h4>
-                <p id="prepaid-data">$0.00</p>
-              </div>
-              <div class="notes-pdf flex">
-                <h4>Notes Receivable: </h4>
-                <p id="notes-data">$0.00</p>
-              </div>
-              <div class="other-pdf flex">
-                <h4>Other Current Assets: </h4>
-                <p id="cash-data">$0.00</p>
-              </div>
-              <div class="cash-pdf flex">
-                <h4>Total Current Assets: </h4>
-                <p id="total-cash">$0.00</p>
-              </div>
-            </div>
-            
          </div>
         </div>
       </div>
