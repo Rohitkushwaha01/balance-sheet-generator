@@ -11,6 +11,9 @@
       src="https://kit.fontawesome.com/a4cf607492.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.js"></script>
   </head>
   <body>
     <section class="nav-section">
@@ -30,7 +33,7 @@
     <section class="main-section">
       <h1>Balance Sheet PDF</h1>
       <div class="flex">
-        <div class="user-form">
+        <div class="user-form" id="page-1">
           <div class="c-flex email">
             <label for="email">Email<span>*</span></label>
             <input type="email" id="email" />
@@ -40,7 +43,7 @@
           <div class="c-flex bname">
             <p>What's the name of your Business?</p>
             <label for="bname">Business name<span>*</span></label>
-            <input type="number" id="bname" />
+            <input type="text" id="bname" />
           </div>
 
           <div class="c-flex stock">
@@ -91,51 +94,62 @@
             <input type="number" id="notes" />
           </div>
         </div>
-        <div class="preview-form">
-         <div class="page-1">
-            <div class="page-1-head">
-              <h3>Balance sheet</h3>
-              <input type="date" id="sheet-date-page-1" asp-format="{0:yyyy-MM-dd}">
-            </div>
-            <div class="current-assests">
-              <h2>Current Assests</h2>
-              <div class="cash-pdf flex">
-                <h4>Cash: </h4>
-                <p id="cash-data">$0.00</p>
-              </div>
-              <div class="acc-pdf flex">
-                <h4>Accounts Receivable: </h4>
-                <p id="acc-data">$0.00</p>
-              </div>
-              <div class="Inven-pdf flex">
-                <h4>Inventory: </h4>
-                <p id="Inven-data">$0.00</p>
-              </div>
-              <div class="prepaid-pdf flex">
-                <h4>Prepaid Expenses: </h4>
-                <p id="prepaid-data">$0.00</p>
-              </div>
-              <div class="notes-pdf flex">
-                <h4>Notes Receivable: </h4>
-                <p id="notes-data">$0.00</p>
-              </div>
-              <div class="other-pdf flex">
-                <h4>Other Current Assets: </h4>
-                <p id="cash-data">$0.00</p>
-              </div>
-              <div class="cash-pdf flex">
-                <h4>Total Current Assets: </h4>
-                <p id="total-cash">$0.00</p>
-              </div>
-            </div>
-            
+        <div class="user-form" id="page-2">
+          <div class="c-flex other-assets">
+            <label for="other-assets">Other Miscellaneous Current liabilities - Please enter "0" if this does not apply to your company:</label>
+            <input type="number" id="other-assets" />
+          </div>
+
+          <div class="c-flex long">
+            <label for="long">Long Term Investments:</label>
+            <input type="number" id="long" />
+          </div>
+
+          <div class="c-flex land">
+            <label for="land">Land:</label>
+            <input type="number" id="land" />
+          </div>
+
+          <div class="c-flex building">
+            <label for="building">Building:</label>
+            <input type="number" id="building" />
+          </div>
+
+          <div class="c-flex acc-build">
+            <label for="acc-build">Accumulated Building Depreciation:</label>
+            <input type="number" id="acc-build" />
+          </div>
+
+          <div class="c-flex machinery">
+            <label for="machinery">Machinery and Equipment:</label>
+            <input type="number" id="machinery" />
+          </div>
+
+          <div class="c-flex acc-marchinery">
+            <label for="acc-marchinery">Accumulated Machinery and Equipment Depreciation::</label>
+            <input type="number" id="acc-marchinery" />
+          </div>
+
+          <div class="c-flex f-f">
+            <label for="f-f">Furniture and Fixtures:</label>
+            <input type="number" id="f-f" />
+          </div>
+
+          <div class="c-flex acc-f">
+            <label for="acc-f">Accumulated Furniture and Fixtures Depreciation:</label>
+            <input type="number" id="acc-f" />
+          </div>
+        </div>
+        <div id="preview-form" class="preview-form">
+        
          </div>
         </div>
       </div>
-      <div class="print">
-        <button onclick="window.print()">Print</button>
+      <div class="save" id="save">
+        <button>Save and Next</button>
       </div>
     </section>
+    <div id="my-table"></div>
     <section class="footer">
         <footer>&copy; 2023 EFORMSCREATOR.COM, ALL RIGHTS RESERVED</footer>
     </section>

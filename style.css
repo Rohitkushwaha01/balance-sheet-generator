@@ -22,6 +22,7 @@ body {
 /* whole documents input */
 input {
   padding: 5px;
+  font-size: 1.4rem;
 }
 
 /* navbar styles */
@@ -84,12 +85,7 @@ input {
   justify-content: flex-start;
 }
 
-.sheet-date label,
-.cash label,
-.accounts label,
-.inventory label,
-.expenses label,
-.notes label {
+label {
   margin-top: 8px;
   margin-bottom: 9px;
 }
@@ -110,31 +106,14 @@ input {
 .preview-form {
   border: 1px solid #898888;
   width: 445px;
-  height: 480px;
+  height: 659px;
   margin: 40px auto;
-  overflow-y: scroll;
+  user-select: none;
+  -ms-user-select: none;
 }
 
-.preview-form::-webkit-scrollbar {
-  width: 2px;
-  background-color: #898888;
-}
-
-.preview-form::-webkit-scrollbar-thumb {
-  background: #000;
-  border-radius: 10px;
-}
-
-.preview-form .page-1 {
-  margin: 10px auto;
-  width: 430px;
-  height: 450px;
-  box-shadow: 0px 0px 6px 1px #000;
-}
-
-.preview-form .page-1 .page-1-head {
-  text-align: center;
-  padding-top: 20px;
+.preview-form embed {
+  height: 100%;
 }
 
 #sheet-date-page-1 {
@@ -170,14 +149,14 @@ input {
 }
 
 /* Print button */
-.print {
+.save {
   text-align: center;
   margin: 20px;
 }
 
-.print button {
+.save button {
   font-size: 1rem;
-  width: 87px;
+  width: 187px;
   padding: 11px 0px;
   background-color: rgb(42, 20, 20);
   box-shadow: 0px 0px 3px 0px #000;
@@ -196,6 +175,11 @@ input {
   font-size: 0.9rem;
 }
 
+/* Hidden */
+.hidden{
+  display: none;
+}
+
 /* responsiveness */
 @media screen and (max-width: 850px) {
   .user-form {
@@ -205,28 +189,5 @@ input {
   .logo img,
   .logo .login {
     margin: 20px;
-  }
-}
-
-/* When print apply this styles */
-@media print {
-  .nav-section,
-  .user-form,
-  .footer,
-  .print,
-  .main-section h1 {
-    display: none;
-  }
-  .preview-form {
-    border: none;
-  }
-  .preview-form {
-    width: 100%;
-  }
-  .preview-form .page-1 {
-    box-shadow: none;
-  }
-  .current-assests {
-    padding: 0px;
   }
 }
